@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Configuration</key>
+	<dict>
+		<key>CycriptURLs</key>
+		<string>file:///System/Library/LockCydgets/FWeather.cydget/LockBackground.html</string>
+		<key>Homepage</key>
+		<string>file:///System/Library/LockCydgets/FWeather.cydget/LockBackground.html</string>
+		<key>Scrollable</key>
+		<string>YES</string>
+	</dict>
+	<key>Plugin</key>
+	<string>WebCycriptLockScreen</string>
+	<key>Tagline</key>
+	<string>FWeather Port</string>
+</dict>
+</plist>

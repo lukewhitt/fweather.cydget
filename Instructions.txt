@@ -1,0 +1,26 @@
+
+Thank you for purchasing miWeather!! 
+
+Instructions: You will need to set your zip code in the weather.js file.
+
+This js file is located in Library/Themes/miWeather. Use ifile and you can change this from 
+your phone. 
+
+Open ifile go to Library/Themes/miWeather/weather/js/weather.js Open this file.
+At the top you will see instructions.
+
+Change
+
+var sUnit = "s";  // m for celcius s for fareinheit
+
+var TwentyFourHourClock = "false"; //Set to true for 24hr false to 12hr.
+
+var sCityCodes = "38671"; //weather code or zip code. Find from weather.com look in url.
+
+
+
+For even more modification you can edit the Speed in the Lockbackground.html this controls
+how fast the screen will scroll. Also if you go into drag.js and look for e.animate you 
+can change this value as well.
+
+http://miWeatherls.blogspot.com

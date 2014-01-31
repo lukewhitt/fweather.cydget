@@ -1,0 +1,84 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+
+ <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+
+
+
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script type="text/javascript" src="weather/js/jquery.cookie.js"></script>
+<link href="weather/css/weather.css" rel="stylesheet" type="text/css" />
+
+<script>
+
+ html = []
+
+   html.push('  <img class="bgicon" width="320" src="weather/icon/5555.jpg" />');  //background, change "5555.jpg" to the name of your image
+    
+        html.push('</div>');
+          
+   var x = html;
+
+document.write(x);
+
+</script>
+
+<!--Max Height-->
+
+<style>
+
+
+.weatherdisplay{
+  position:relative;
+  top:-2500px;
+  max-width: 30px;
+   -webkit-backface-visibility: hidden; -webkit-perspective: 1000;
+
+}
+
+body { overflow-x: hidden; }
+
+
+#weatherframe{
+  position: absolute;
+  width: 350px;
+  height: 570px;
+  left: -7px;
+  top:2446px;
+  overflow: hidden;
+  overflow-x: hidden;
+   -webkit-backface-visibility: hidden; -webkit-perspective: 1000;
+}
+
+
+html{
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+<div class ="weatherdisplay">
+<iframe id="weatherframe" scrolling="no" frameborder="0"  src="weather/main.html"></iframe>
+</div>
+
+<!--<iframe id="settings" scrolling="no" frameborder="0"  src="weather/settings.html"></iframe>-->
+<div id="weatherbg"></div>
+
+
+
+</body>
+</html>
+
+<!--Main Html for miWeather Created by JunesiPhone 2013-->
+<!--JunesGraphics.blogspot.com-->
