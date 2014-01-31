@@ -842,9 +842,8 @@ var windsdate = getCalendarDate2();
 	"N/A" : "<div class='desc'>i don't know what <span style='color: #ff6600'>the fuck is happening</span> Captain!</div>",
 	};
 	
-	var desc = hrefMap[json.StandardObservation.text];
-	
-	if (desc === "")
+	var desc = hrefMap["balls text"];
+	if (typeof desc === 'undefined')
 		html.push("<div class='desc'>the weather is fuckin' <span style='color: #ff6600'>" + json.StandardObservation.text + "</span> Captain!</div>");
 	else
 		html.push(desc);
