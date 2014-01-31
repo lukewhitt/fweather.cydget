@@ -781,7 +781,7 @@ var windsdate = getCalendarDate2();
     
     }
     
-    if(json.StandardObservation.text == "Cloudy")
+    else if(json.StandardObservation.text == "Cloudy")
     {
         
         html.push("<div class='desc'>there are some fuckin' <span style='color: #FF6600'>clouds approaching</span> Captain!</div>");
