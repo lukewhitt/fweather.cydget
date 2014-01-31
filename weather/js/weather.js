@@ -3,10 +3,10 @@ var sUnit = "m";  // m for celcius s for fareinheit
 
 var TwentyFourHourClock = "false"; //Set to true for 24hr false to 12hr.
 
-var sCityCodes = "SFXX0010:1:SF"; //weather code. Find from weather.com look in url.
+var sCityCodes = "UKXX0037:1:UK"; //weather code. Find from weather.com look in url.
 //for example, San Francisco would be: USCA0987:1:US
 
-var cityNameVisible = false; //if you want your city name to appear under the time
+var cityNameVisible = true; //if you want your city name to appear under the time
 
 
 
@@ -773,310 +773,57 @@ var windsdate = getCalendarDate2();
 	
 
 	//desc
-    
-    if(json.StandardObservation.text == "Partly Cloudy")
-    {
-        
-        html.push("<div class='desc'>there are a few <span style='color: #FF6600'>fuckin' clouds</span> Captain</div>");
-    
-    }
-    
-    else if(json.StandardObservation.text == "Cloudy")
-    {
-        
-        html.push("<div class='desc'>there are some fuckin' <span style='color: #FF6600'>clouds approaching</span> Captain!</div>");
-    
-    }
-    
-    else if(json.StandardObservation.text == "Sunny")
-    {
-        
-        html.push("<div class='desc'>it's clear as fucking day Captain!</div>");
-    
-    }
-    
-    else if(json.StandardObservation.text == "Clear")
-    {
-        
-        html.push("<div class='desc'>it's clear as fucking day Captain!</div>");
-    
-    }
-    
-    else if(json.StandardObservation.text == "Fair")
-    {
-        
-        html.push("<div class='desc'>it's <span style='color: #ff6600'>clear</span> as fucking day Captain!</div>");
-    
-    }
-    
-    else if(json.StandardObservation.text == "Hot")
-    {
-        
-        html.push("<div class='desc'>it's hot as <span style='color: #ff6600'>fucking balls</span> out here Captain!</div>");
-    
-    }
-    
-    else if(json.StandardObservation.text == "Rain")
-    {
-        
-        html.push("<div class='desc'>it's <span style='color: #ff6600'>raining balls</span> out here Captain!</div>");
-    
-    }
-    
-    else if(json.StandardObservation.text == "Drizzle")
-    {
-        
-        html.push("<div class='desc'>there is some light <span style='color: #ff6600'>fuckin'</span> rain Captain!</div>");
-    
-    }
-    
-    else if(json.StandardObservation.text == "Snow")
-    {
-        
-        html.push("<div class='desc'>Captain, it's <span style='color: #ff6600'>fucking snowing!</span></div>");
-    
-    }
-    
-    else if(json.StandardObservation.text == "Hail")
-    {
-        
-        html.push("<div class='desc'>fuckin' <span style='color: #ff6600'>chunks of ice</span>are coming down Captain!</div>");
-    
-    }
-    
-    else if(json.StandardObservation.text == "Mist")
-    {
-        
-        html.push("<div class='desc'>i can't <span style='color: #ff6600'>see shit</span> Captain!</div>");
-    
-    }
-    
-    else if(json.StandardObservation.text == "Fog")
-    {
-        
-        html.push("<div class='desc'>i can't <span style='color: #ff6600'>see shit</span> Captain!</div>");
-    
-    }
-    
-    else if(json.StandardObservation.text == "Fog Patches")
-    {
-        
-        html.push("<div class='desc'>i can barely <span style='color: #ff6600'>see shit</span> Captain!</div>");
-    
-    }
-    
-    else if(json.StandardObservation.text == "Smoke")
-    {
-        
-        html.push("<div class='desc'><span style='color: #ff6600'>fucking smoke</span> is around us Captain!</div>");
-    
-    }
-    
-    else if(json.StandardObservation.text == "Volcanic Ash")
-    {
-        
-        html.push("<div class='desc'>Captain! there is <span style='color: #ff6600'>fucking volcanic ash!</span></div>");
-    
-    }
-    
-    else if(json.StandardObservation.text == "Widespread Dust")
-    {
-        
-        html.push("<div class='desc'>there is <span style='color: #ff6600'>dust</span> floating around us Captain</div>");
-    
-    }
-    
-    else if(json.StandardObservation.text == "Sand")
-    {
-        
-        html.push("<div class='desc'>we have hit shores Captain!<span style='color: #ff6600'> sand</span> is near!</div>");
-    
-    }
-    
-    else if(json.StandardObservation.text == "Rain Mist")
-    {
-        
-        html.push("<div class='desc'>it is<span style='color: #ff6600'>wet as fuck</span> Captain</div>");
-    
-    }
-    
-    else if(json.StandardObservation.text == "Rain Showers")
-    {
-        
-        html.push("<div class='desc'>it is<span style='color: #ff6600'>wet as fuck</span> Captain</div>");
-    
-    }
-    
-    else if(json.StandardObservation.text == "Rain Shower")
-    {
-        
-        html.push("<div class='desc'>it is<span style='color: #ff6600'>wet as fuck</span> Captain</div>");
-    
-    }
-    
-    else if(json.StandardObservation.text == "Thunderstorm")
-    {
-        
-        html.push("<div class='desc'>there is a <span style='color: #ff6600'>fucking storm</span> Captain!</div>");
-    
-    }
-    
-    else if(json.StandardObservation.text == "Thunderstorms and Rain")
-    {
-        
-        html.push("<div class='desc'>there is a <span style='color: #ff6600'>fucking storm</span> Captain!</div>");
-    
-    }
-    
-    else if(json.StandardObservation.text == "Thunderstorms and Snow")
-    {
-        
-        html.push("<div class='desc'>there is a <span style='color: #ff6600'>fucking storm and snow</span> Captain!</div>");
-    
-    }
-    
-    else if(json.StandardObservation.text == "Thunderstorm with Hail")
-    {
-        
-        html.push("<div class='desc'>there is a <span style='color: #ff6600'>fucking storm of hail</span> Captain!</div>");
-    
-    }
-    
-    else if(json.StandardObservation.text == "Thunderstorm with Small Hail")
-    {
-        
-        html.push("<div class='desc'>there is a <span style='color: #ff6600'>fucking storm of light hail</span> Captain!</div>");
-    
-    }
-    
-    else if(json.StandardObservation.text == "Freezing Drizzle")
-    {
-        
-        html.push("<div class='desc'>i am <span style='color: #ff6600'>freezing my balls </span> out here Captain!</div>");
-    
-    }
-    
-    else if(json.StandardObservation.text == "Freezing Rain")
-    {
-        
-        html.push("<div class='desc'>i am <span style='color: #ff6600'>freezing my balls </span> and its <span style='color: #ff6600'>wet as fuck</span> out here Captain!</div>");
-    
-    }
-    
-    else if(json.StandardObservation.text == "Freezing Fog")
-    {
-        
-        html.push("<div class='desc'>i can't see <span style='color: #ff6600'>shit</span> and i am <span style='color: #ff6600'>freezing my balls</span> Captain!</div>");
-    
-    }
-    
-    else if(json.StandardObservation.text == "Patches of Fog")
-    {
-        
-        html.push("<div class='desc'>i can barely see <span style='color: #ff6600'>anything</span> Captain!</div>");
-    
-    }
-    
-    else if(json.StandardObservation.text == "Shallow Fog")
-    {
-        
-        html.push("<div class='desc'>i can see some <span style='color: #ff6600'>shit</span> Captain!</div>");
-    
-    }
-    
-    else if(json.StandardObservation.text == "Partial Fog")
-    {
-        
-        html.push("<div class='desc'>i can see some <span style='color: #ff6600'>shit</span> Captain!</div>");
-    
-    }
-    
-    else if(json.StandardObservation.text == "Overcast")
-    {
-        
-        html.push("<div class='desc'>there are <span style='color: #ff6600'>clouds fuckin' everywhere</span> Captain!</div>");
-    
-    }
-    
-    else if(json.StandardObservation.text == "Mostly Cloudy")
-    {
-        
-        html.push("<div class='desc'>i can see some <span style='color: #ff6600'>shit</span> Captain!</div>");
-    
-    }
-    
-    else if(json.StandardObservation.text == "Scattered Clouds")
-    {
-        
-        html.push("<div class='desc'>it's <span style='color: #ff6600'>almost clear as fuckin'</span> Captain!</div>");
-    
-    }
-    
-    else if(json.StandardObservation.text == "Snow Grains")
-    {
-        
-        html.push("<div class='desc'>there are <span style='color: #ff6600'>bits of fuckin' snow</span> Captain!</div>");
-    
-    }
-    
-    else if(json.StandardObservation.text == "Light Snow Grains")
-    {
-        
-        html.push("<div class='desc'>there is some <span style='color: #ff6600'>light fucking snow</span> Captain</div>");
-    
-    }
-    
-    else if(json.StandardObservation.text == "Heavy Snow Grains")
-    {
-        
-        html.push("<div class='desc'>there is some <span style='color: #ff6600'>light fucking snow</span> Captain</div>");
-    
-    }
-    
-    else if(json.StandardObservation.text == "Heavy Snow ")
-    {
-        
-        html.push("<div class='desc'>there is some <span style='color: #ff6600'>light fucking snow</span> Captain</div>");
-    
-    }
-    
-    else if(json.StandardObservation.text == "Snow")
-    {
-        
-        html.push("<div class='desc'>there is some <span style='color: #ff6600'>light fucking snow</span> Captain</div>");
-    
-    }
-    
-    else if(json.StandardObservation.text == "Unknown")
-    {
-        
-        html.push("<div class='desc'>i don't know what <span style='color: #ff6600'>the fuck is happening</span> Captain!</div>");
-    
-    }
-    
-    else if(json.StandardObservation.text == "N/A")
-    {
-        
-        html.push("<div class='desc'>i don't know what <span style='color: #ff6600'>the fuck is happening</span> Captain!</div>");
-    
-    }
-    
-    else
-    {
-        
-        html.push(json.StandardObservation.text);
-        
-    }
 
-    
-    
-    
-    
-    
-
+	var hrefMap = {
+	"Partly Cloudy" : "<div class='desc'>there are a few <span style='color: #FF6600'>fuckin' clouds</span> Captain</div>",
+	 "Cloudy" : "<div class='desc'>there are some fuckin' <span style='color: #FF6600'>clouds approaching</span> Captain!</div>",
+	"Sunny" : "<div class='desc'>it's clear as fucking day Captain!</div>",
+	"Clear" : "<div class='desc'>it's clear as fucking day Captain!</div>",
+	"Fair" : "<div class='desc'>it's <span style='color: #ff6600'>clear</span> as fucking day Captain!</div>",
+	"Hot" : "<div class='desc'>it's hot as <span style='color: #ff6600'>fucking balls</span> out here Captain!</div>",
+	"Rain" : "<div class='desc'>it's <span style='color: #ff6600'>raining balls</span> out here Captain!</div>",
+	"Drizzle" : "<div class='desc'>there is some light <span style='color: #ff6600'>fuckin'</span> rain Captain!</div>",
+	"Snow" : "<div class='desc'>Captain, it's <span style='color: #ff6600'>fucking snowing!</span></div>",
+	"Hail" : "<div class='desc'>fuckin' <span style='color: #ff6600'>chunks of ice</span>are coming down Captain!</div>",
+	"Mist" : "<div class='desc'>i can't <span style='color: #ff6600'>see shit</span> Captain!</div>",
+	"Fog" : "<div class='desc'>i can't <span style='color: #ff6600'>see shit</span> Captain!</div>",
+	"Fog Patches" : "<div class='desc'>i can barely <span style='color: #ff6600'>see shit</span> Captain!</div>",
+	"Smoke" : "<div class='desc'><span style='color: #ff6600'>fucking smoke</span> is around us Captain!</div>",
+	"Volcanic Ash" : "<div class='desc'>Captain! there is <span style='color: #ff6600'>fucking volcanic ash!</span></div>",
+	"Widespread Dust" : "<div class='desc'>there is <span style='color: #ff6600'>dust</span> floating around us Captain</div>",
+	"Sand" : "<div class='desc'>we have hit shores Captain!<span style='color: #ff6600'> sand</span> is near!</div>",
+	"Rain Mist" : "<div class='desc'>it is<span style='color: #ff6600'>wet as fuck</span> Captain</div>",
+	"Rain Showers" : "<div class='desc'>it is<span style='color: #ff6600'>wet as fuck</span> Captain</div>",
+	"Rain Shower" : "<div class='desc'>it is<span style='color: #ff6600'>wet as fuck</span> Captain</div>",
+	"Thunderstorm" : "<div class='desc'>there is a <span style='color: #ff6600'>fucking storm</span> Captain!</div>",
+	"Thunderstorms and Rain" : "<div class='desc'>there is a <span style='color: #ff6600'>fucking storm</span> Captain!</div>",
+	"Thunderstorms and Snow" : "<div class='desc'>there is a <span style='color: #ff6600'>fucking storm and snow</span> Captain!</div>",
+	"Thunderstorm with Hail" : "<div class='desc'>there is a <span style='color: #ff6600'>fucking storm of hail</span> Captain!</div>",
+	"Thunderstorm with Small Hail" : "<div class='desc'>there is a <span style='color: #ff6600'>fucking storm of light hail</span> Captain!</div>",
+	"Freezing Drizzle" : "<div class='desc'>i am <span style='color: #ff6600'>freezing my balls </span> out here Captain!</div>",
+	"Freezing Rain" : "<div class='desc'>i am <span style='color: #ff6600'>freezing my balls </span> and its <span style='color: #ff6600'>wet as fuck</span> out here Captain!</div>",
+	"Freezing Fog" : "<div class='desc'>i can't see <span style='color: #ff6600'>shit</span> and i am <span style='color: #ff6600'>freezing my balls</span> Captain!</div>",
+	"Patches of Fog" : "<div class='desc'>i can barely see <span style='color: #ff6600'>anything</span> Captain!</div>",
+	"Shallow Fog" : "<div class='desc'>i can see some <span style='color: #ff6600'>shit</span> Captain!</div>",
+	"Partial Fog" : "<div class='desc'>i can see some <span style='color: #ff6600'>shit</span> Captain!</div>",
+	"Overcast" : "<div class='desc'>there are <span style='color: #ff6600'>clouds fuckin' everywhere</span> Captain!</div>", 
+	"Mostly Cloudy" : "<div class='desc'>i can see some <span style='color: #ff6600'>shit</span> Captain!</div>",
+	"Scattered Clouds" : "<div class='desc'>it's <span style='color: #ff6600'>almost clear as fuckin'</span> Captain!</div>",
+	"Snow Grains" : "<div class='desc'>there are <span style='color: #ff6600'>bits of fuckin' snow</span> Captain!</div>",
+	"Light Snow Grains" : "<div class='desc'>there is some <span style='color: #ff6600'>light fucking snow</span> Captain</div>",
+	"Heavy Snow Grains" : "<div class='desc'>there is some <span style='color: #ff6600'>light fucking snow</span> Captain</div>",
+	"Heavy Snow" : "<div class='desc'>there is some <span style='color: #ff6600'>light fucking snow</span> Captain</div>",
+	"Snow" : "<div class='desc'>there is some <span style='color: #ff6600'>light fucking snow</span> Captain</div>",
+	"Unknown" : "<div class='desc'>i don't know what <span style='color: #ff6600'>the fuck is happening</span> Captain!</div>",
+	"N/A" : "<div class='desc'>i don't know what <span style='color: #ff6600'>the fuck is happening</span> Captain!</div>",
+	};
 	
-
+	var desc = hrefMap[json.StandardObservation.text];
 	
+	if (desc === "")
+		html.push("<div class='desc'>the weather is fuckin' <span style='color: #ff6600'>" + json.StandardObservation.text + "</span> Captain!</div>");
+	else
+		html.push(desc);
 
 
 
